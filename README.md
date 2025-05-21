@@ -81,3 +81,77 @@ python scripts/train.py --config config/config.yaml
 data/ 以下は .gitignore でGitに含まれません．必要に応じて .gitkeep を使ってフォルダ構造のみ維持してください．
 
 実験の再現性を保つために，config.yaml を整理して管理してください．
+
+# .gitignore の例
+```
+# Pythonキャッシュ・中間ファイル
+__pycache__/
+*.py[cod]
+*.so
+*.pyd
+
+# Jupyter Notebookのチェックポイント
+.ipynb_checkpoints/
+
+# 環境ファイル・依存管理
+.env
+.venv/
+venv/
+env/
+Pipfile.lock
+poetry.lock
+
+# Condaの環境（保存しない場合）
+*.conda
+*.env
+*.yml
+
+# データ関連
+data/
+datasets/
+*.csv
+*.tsv
+*.zip
+*.tar.gz
+*.npz
+*.npy
+*.pt
+*.pth
+*.ckpt
+*.h5
+*.wav
+*.mp3
+
+# モデルの出力・チェックポイント
+checkpoints/
+experiments/
+logs/
+runs/         # TensorBoard
+
+# キャッシュ・ビルド
+*.log
+*.bak
+*.tmp
+*.swp
+.cache/
+build/
+dist/
+
+# VSCode固有
+.vscode/
+*.code-workspace
+
+# Mac固有
+.DS_Store
+
+# Jupyter Notebookの出力画像など
+*.png
+*.jpg
+*.jpeg
+*.gif
+
+# テスト出力・一時ファイル
+*.out
+*.err
+*.tmp
+```
